@@ -1,0 +1,31 @@
+{
+    "name": "@domojs/bonjour",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/server/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\"",
+        "build:js": "tsc -p src",
+        "build:js:routes": "browserify -x @akala/client -x @akala/core dist/client/routes.js -o dist/routes.js",
+        "build:js:tile": "browserify -x @akala/client -x @akala/core -i @domojs/theme-default/dist/tile dist/client/tile.js -o dist/tile.js",
+        "prepublishOnly": "npm run build",
+        "build": "npm run build:js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "types": "dist/server/index.d.ts",
+    "dependencies": {
+        "@akala/server": "^2.0.36",
+        "bonjour": "^3.5.0"
+    },
+    "peerDependencies": {
+        "@domojs/service-discovery": "^1.1.1",
+        "@domojs/theme-default": "^1.1.20"
+    },
+    "devDependencies": {
+        "@domojs/service-discovery": "^1.1.1",
+        "@types/bonjour": "^3.5.5",
+        "@types/debug": "^0.0.30"
+    }
+}
