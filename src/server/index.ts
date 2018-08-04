@@ -11,17 +11,23 @@ akala.injectWithNameAsync(['$isModule', '$agent.zeroconf'], function (isModule: 
     {
         var zeroconf = akala.api.jsonrpcws(sd.meta).createServerProxy(client);
 
-        akala.each(os.networkInterfaces(), (nic, name) =>
+        akala.each(os.networkInterfaces(), (nics) =>
         {
-            const bonjour = bonjourFn({ interface: name });
+            akala.each(nics, function (nic)
+            {
+                if (nic.family == 'IPv4')
+                {
+                    const bonjour = bonjourFn({ interface: nic.address });
 
-            bonjour.find({}).on('up', function (service)
-            {
-                zeroconf.add(service);
-            }).on('down', function (service)
-            {
-                zeroconf.delete(service);
-            });
+                    bonjour.find(null, function (service)
+                    {
+                        zeroconf.add(service);
+                    }).on('down', function (service)
+                    {
+                        zeroconf.delete(service);
+                    });
+                }
+            })
         });
     }
 });
