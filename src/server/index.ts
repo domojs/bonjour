@@ -19,7 +19,7 @@ akala.injectWithNameAsync(['$isModule', '$agent.zeroconf'], function (isModule: 
                 {
                     const bonjour = bonjourFn({ interface: nic.address });
 
-                    bonjour.find(null, function (service)
+                    bonjour.find({}, function (service)
                     {
                         akala.logger.info(service);
                         zeroconf.add(service);
