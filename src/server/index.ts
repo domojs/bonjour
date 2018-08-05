@@ -21,6 +21,7 @@ akala.injectWithNameAsync(['$isModule', '$agent.zeroconf'], function (isModule: 
 
                     bonjour.find(null, function (service)
                     {
+                        akala.logger.info(service);
                         zeroconf.add(service);
                     }).on('down', function (service)
                     {
