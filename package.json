@@ -26,6 +26,6 @@
     "devDependencies": {
         "@domojs/service-discovery": "^1.1.1",
         "@types/bonjour": "^3.5.5",
-        "@types/debug": "^0.0.30"
+        "@types/debug": "^4.1.0"
     }
 }
