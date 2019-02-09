@@ -5,7 +5,7 @@ import * as sd from '@domojs/service-discovery';
 import * as os from 'os'
 
 
-akala.injectWithNameAsync(['$isModule', '$agent.zeroconf'], function (isModule: akala.worker.IsModule, client)
+akala.injectWithNameAsync(['$isModule', '$agent.api/zeroconf'], function (isModule: akala.worker.IsModule, client)
 {
     if (isModule('@domojs/bonjour'))
     {

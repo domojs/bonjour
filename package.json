@@ -16,7 +16,7 @@
     "license": "MIT",
     "types": "dist/server/index.d.ts",
     "dependencies": {
-        "@akala/server": "^2.0.36",
+        "@akala/server": "^2.1.11",
         "bonjour": "^3.5.0"
     },
     "peerDependencies": {
@@ -24,8 +24,8 @@
         "@domojs/theme-default": "^1.1.20"
     },
     "devDependencies": {
-        "@domojs/service-discovery": "^1.1.1",
+        "@domojs/service-discovery": "^1.1.7",
         "@types/bonjour": "^3.5.5",
-        "@types/debug": "^0.0.30"
+        "@types/debug": "^4.1.0"
     }
 }
