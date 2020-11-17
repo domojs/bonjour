@@ -55,9 +55,9 @@
   integrity sha512-Tz1081oLt/JHp0V+z6Rctj5zdykn7SC6bgQF9pHGlfSoLqmz2AgLjm2sASwS9dEZxwExIdZG1cNoUGHUX5t9/A==
 
 "@types/bonjour@^3.5.5":
-  version "3.5.6"
-  resolved "https://registry.yarnpkg.com/@types/bonjour/-/bonjour-3.5.6.tgz#200c79b3ab8acf21676297a1d71432a74ce02112"
-  integrity sha512-BQvTuANZ2UyBnrAxxdI0ZeJEqelV7oJHLmczwPng0OawCpuMPfPVWTglFWSyRCfaeeSJFdnlPREmoK6BU9xzgA==
+  version "3.5.8"
+  resolved "https://registry.yarnpkg.com/@types/bonjour/-/bonjour-3.5.8.tgz#f1dd61fa2c0c660f47624cb899f830229246bf59"
+  integrity sha512-Di3AHXV6SS04EyurnOGxGjFXiLWmt2iopQTNtf0UodfvvGPJo+n60YHWfEy2XGF4dBeYQyrf7RpO5cqzrPxE9Q==
   dependencies:
     "@types/node" "*"
 
